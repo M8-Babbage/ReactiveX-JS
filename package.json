@@ -1,37 +1,22 @@
 {
-  "name": "reactivex",
+  "name": "rxjs-dev",
   "version": "1.0.0",
-  "description": "learning all about rxjs using typescript",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "ts-node src/index.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/M8-Babbage/NodeTS.git"
-  },
-  "keywords": [
-    "rxjs",
-    "typescript",
-    "node",
-    "reactivex",
-    "async",
-    "sync"
-  ],
-  "author": "Edwin J. Páez",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/M8-Babbage/NodeTS/issues"
-  },
-  "homepage": "https://github.com/M8-Babbage/NodeTS#readme",
-  "devDependencies": {
-    "@types/node": "^18.15.5",
-    "nodemon": "^2.0.22",
-    "ts-node": "^10.9.1",
-    "tslib": "^2.5.0",
-    "typescript": "^5.0.2"
-  },
   "dependencies": {
-    "rxjs": "^7.8.0"
-  }
+    "rxjs": "^7.3.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.49.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.2.5",
+    "css-loader": "^6.2.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "scripts": {
+    "start": "webpack serve --mode development --open --port=8081"
+  },
+  "author": "",
+  "license": "ISC"
 }

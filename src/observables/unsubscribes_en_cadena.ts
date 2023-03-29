@@ -17,14 +17,15 @@ const intervalo$ = new Observable<number>(subscriber => {
   }, 1000);
 
   // Ejecutar despues de 2.5 segundos
-  // setTimeout(() => {
-  //   // Si se lanza el complete, el observable se completa y no se ejecuta más, pero no se llama el return del observable, solo se llama cuando se desuscriben
-  //   subscriber.complete();
-  // }, 2500);
+  setTimeout(() => {
+    // Si se lanza el complete, el observable se completa y no se ejecuta más, se llama el return del observable, también se lanza cuando se llama al unsubscribe
+    subscriber.complete();
+  }, 2500);
 
   // El return es para cuando se llame al unsubscribe, aqui limpiamos los intervalos, también se lanza cuando se completa el observable
   return () => {
     clearInterval(interval);
+    console.log("Complete realizado");
     console.log('Intervalo destruido');
   }
 });
