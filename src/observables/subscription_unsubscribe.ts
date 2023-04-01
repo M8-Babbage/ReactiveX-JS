@@ -2,7 +2,7 @@
 import { Observer, Observable } from 'rxjs';
 
 // Creamos nuestro observer
-const observer: Observer<any> = {
+const observer: Observer<number> = {
   next: (value) => console.log('next', value),
   error: (error) => console.warn('error', error),
   complete: () => console.info('complete')
@@ -11,7 +11,7 @@ const observer: Observer<any> = {
 // Creamos nuestro observable
 const intervalo$ = new Observable<number>(subscriber => {
   let count = 0;
-  // Generamos un intervalo cada segundo y emitimos un valor del contrador en 1
+  // Generamos un intervalo cada segundo y emitimos un valor del contador en 1
   const interval = setInterval(() => {
     subscriber.next(count++);
   }, 1000);

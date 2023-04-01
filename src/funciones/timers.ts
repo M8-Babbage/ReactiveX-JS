@@ -13,7 +13,7 @@ const interval$ = interval(1000);
 
 // Interval es un proceso asíncrono
 console.log("Inicio Interval");
-// interval$.subscribe(observer);
+interval$.subscribe(observer);
 console.log("Fin Interval");
 
 
@@ -28,7 +28,7 @@ const timer3$ = timer(hoyEn5);
 
 // El timer es un proceso asíncrono
 console.log("Inicio Timer");
-// timer$.subscribe(observer);
-// timer2$.subscribe(observer);
+timer$.subscribe(observer);
+timer2$.subscribe(observer);
 timer3$.subscribe(observer);
 console.log("Fin Timer");

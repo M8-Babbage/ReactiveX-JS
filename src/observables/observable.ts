@@ -8,7 +8,7 @@ const observer: Observer<string> = {
   complete: () => console.info('complete')
 }
 
-// const obs$ = Observable.create();
+// Cold observable, emite los valores dentro de sí mismo
 const obs$ = new Observable<string>(subscriber => {
   // Primera emisión del observable
   subscriber.next('Hola');

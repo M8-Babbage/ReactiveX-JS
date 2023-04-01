@@ -19,7 +19,10 @@ const intervalo$ = new Observable<number>(subscriber => {
  * 3. Next, error, complete
  * Permite crear un Hot Observable ya que se puede emitir valores en cualquier momento.
  */
+// Creamos el subject
 const subject$ = new Subject();
+
+// Creamos una variable para subscribirnos al observable pasándole el subject$ como observer, de esta forma, el subject$ se suscribe al observable y se puede emitir valores en cualquier momento.
 const subject = intervalo$.subscribe(subject$);
 
 // Aquí se puede ver que el subject$ es un observer, por lo que se puede usar como tal, y se puede usar para emitir valores, como se puede ver en el setTimeout.

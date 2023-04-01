@@ -11,7 +11,7 @@ const observer: Observer<number> = {
 // Creamos nuestro observable
 const intervalo$ = new Observable<number>(subscriber => {
   let count = 0;
-  // Generamos un intervalo cada segundo y emitimos un valor del contrador en 1
+  // Generamos un intervalo cada segundo y emitimos un valor del contador en 1
   const interval = setInterval(() => {
     subscriber.next(count++);
   }, 1000);
